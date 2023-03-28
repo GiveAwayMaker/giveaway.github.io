@@ -2,13 +2,16 @@
 <html>
     <head>
         <title>Giveway</title>
+        <link rel="stylesheet" href="index.css">
     </head>
 
     <body>
-        <p id="time"></p>
+    	<p style="color:black;" id="time"></p>
     </body>
 
 <script>
+
+	var texte = "Pour participer et tenter de gagner une des 6 cartes Steam, <br> rendez vous sur cette page à la fin du timer"
     // Set the date we're counting down to
     var countDownDate = new Date("Apr 1, 2023 16:00:00").getTime();
     
@@ -28,7 +31,7 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
       // Display the result in the element with id="time"
-      document.getElementById("time").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      document.getElementById("time").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s "+"<br>"+texte;
     
       // If the count down is finished, write some text
       if (distance < 0) {
